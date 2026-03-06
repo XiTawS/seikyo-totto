@@ -32,7 +32,7 @@ function Hero() {
   return (
     <section className="min-h-[90vh] grid md:grid-cols-2">
       {/* Texte */}
-      <div className="flex flex-col justify-center px-8 md:px-16 py-20 bg-[var(--color-bg-dark)]">
+      <div className="flex flex-col justify-center px-8 md:px-16 py-16 md:py-20 bg-[var(--color-bg-dark)] order-2 md:order-1">
         <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.3 }}>
           <EditableText contentKey="home.hero.label" defaultValue="Bistrot italien — Pizzeria" tag="p"
             className="text-[var(--color-orange)] text-xs tracking-[0.4em] uppercase mb-4" />
@@ -52,7 +52,7 @@ function Hero() {
       </div>
 
       {/* Image */}
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden min-h-[40vh] md:min-h-0 order-1 md:order-2">
         <EditableImage contentKey="home.hero.bg"
           defaultSrc="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1200&q=80"
           alt="Pizza TOTTO" fill sizes="50vw" priority
@@ -151,10 +151,10 @@ function Carte() {
         </Fade>
 
         {/* Onglets */}
-        <div className="flex justify-center gap-2 md:gap-4 mb-10 flex-wrap">
+        <div className="flex justify-start md:justify-center gap-2 md:gap-4 mb-10 overflow-x-auto pb-2 scrollbar-none">
           {categories.map((c, i) => (
             <button key={c.title} onClick={() => setActive(i)}
-              className={`px-5 py-2.5 text-xs tracking-[0.15em] uppercase transition-all duration-300 ${
+              className={`px-5 py-2.5 text-xs tracking-[0.15em] uppercase transition-all duration-300 whitespace-nowrap flex-shrink-0 ${
                 active === i
                   ? "bg-[var(--color-orange)] text-white"
                   : "text-white/40 hover:text-white border border-white/10"
@@ -166,10 +166,10 @@ function Carte() {
 
         {/* Contenu catégorie active */}
         <motion.div key={active} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
-          className="grid md:grid-cols-12 gap-8 items-start">
+          className="grid md:grid-cols-12 gap-6 md:gap-8 items-start">
 
           {/* Image avec nom */}
-          <div className="md:col-span-5 relative group overflow-hidden">
+          <div className="md:col-span-5 relative group overflow-hidden rounded-sm">
             <EditableImage contentKey={`home.carte.${cat.title.toLowerCase()}.img`}
               defaultSrc={cat.img} alt={cat.title} width={800} height={600}
               className="w-full aspect-[4/3] object-cover" />
