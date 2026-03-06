@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* ─── DA TOTTO — bistrot italien moderne, énergie orange ─── */
+  --color-bg: #FBF9F5;
+  --color-bg-warm: #F2EDE4;
+  --color-bg-dark: #1A1612;
+  --color-bg-deep: #110E0B;
+
+  /* Accents — orange TOTTO + vert olive italien */
+  --color-orange: #E8762B;
+  --color-orange-dark: #C45F1E;
+  --color-olive: #4A5A30;
+  --color-cream: #F5E6C8;
+
+  /* Text */
+  --color-text: #1A1612;
+  --color-text-light: #F2EDE4;
+  --color-text-muted: #7A7268;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--color-bg-dark); }
+::-webkit-scrollbar-thumb { background: var(--color-orange); border-radius: 2px; }
+
+::selection {
+  background: var(--color-orange);
+  color: white;
+}
