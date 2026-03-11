@@ -7,11 +7,17 @@ import AdminBar from "@/components/cms/AdminBar";
 export const metadata: Metadata = {
   title: "TOTTO — Bistrot Italien & Pizzeria à Saint-Vallier",
   description: "Bistrot italien et pizzeria à Saint-Vallier. Produits frais, pizzas artisanales, pâtes maison. Sur place, à emporter ou en livraison.",
-  keywords: "TOTTO, restaurant italien, pizzeria, Saint-Vallier, bistrot, pizza, pâtes, Drôme",
+  keywords: "TOTTO, restaurant italien, pizzeria, Saint-Vallier, bistrot, pizza, pâtes, Drôme, cuisine italienne, livraison, à emporter",
+  manifest: "/manifest.json",
   openGraph: {
     title: "TOTTO — Bistrot Italien & Pizzeria",
     description: "Produits frais et de qualité. Du mardi au samedi, midi & soir. Saint-Vallier.",
+    url: "https://totto.seikyo.fr",
     type: "website",
+    locale: "fr_FR",
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 

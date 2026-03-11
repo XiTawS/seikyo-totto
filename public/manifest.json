@@ -1,0 +1,12 @@
+{
+  "name": "TOTTO — Bistrot Italien & Pizzeria",
+  "short_name": "TOTTO",
+  "description": "Bistrot italien et pizzeria à Saint-Vallier. Produits frais, pizzas artisanales, pâtes maison. Sur place, à emporter ou en livraison.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF9F5",
+  "theme_color": "#E8762B",
+  "icons": [
+    { "src": "/favicon.ico", "sizes": "any", "type": "image/x-icon" }
+  ]
+}
